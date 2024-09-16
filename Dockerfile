@@ -1,3 +1,3 @@
-FROM ubuntu
+FROM httpd
 RUN apt update -y
-CMD ["apt", "install", "apache2", "-y"]
+COPY ./public-html/ /usr/local/apache2/htdocs/
